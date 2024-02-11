@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start:docker": "docker-compose up",
     "dev": "tsx watch src/http/server.ts"
   },
   "keywords": [],
