@@ -1,0 +1,19 @@
+# Polls routes
+### Create a poll
+POST http://localhost:3333/polls HTTP/1.1
+Host: localhost:3333
+Content-Type: application/json
+
+{
+  "title": "poll title"
+}
+
+### Get a poll
+GET http://localhost:3333/polls/{id} HTTP/1.1
+Host: localhost:3333
+Content-Type: application/json
+
+### Vote in a poll
+POST http://localhost:3333/polls/{id}/voltes HTTP/1.1
+Host: localhost:3333
+Content-Type: application/json
