@@ -5,7 +5,8 @@ Host: localhost:3333
 Content-Type: application/json
 
 {
-  "title": "poll title"
+  "title": "Qual o melhor framework Node.js?",
+  "options": ["Express", "Fastify", "NestJS", "HapiJS"]
 }
 
 ### Get a poll
@@ -14,6 +15,10 @@ Host: localhost:3333
 Content-Type: application/json
 
 ### Vote in a poll
-POST http://localhost:3333/polls/{id}/voltes HTTP/1.1
+POST http://localhost:3333/polls/{id}/votes HTTP/1.1
 Host: localhost:3333
 Content-Type: application/json
+
+{
+  "pollOptionId": "pollOptionId"
+}
