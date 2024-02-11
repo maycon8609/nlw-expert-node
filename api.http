@@ -10,15 +10,20 @@ Content-Type: application/json
 }
 
 ### Get a poll
-GET http://localhost:3333/polls/{id} HTTP/1.1
+GET http://localhost:3333/polls/:pollId HTTP/1.1
 Host: localhost:3333
 Content-Type: application/json
 
 ### Vote in a poll
-POST http://localhost:3333/polls/{id}/votes HTTP/1.1
+POST http://localhost:3333/polls/:pollId/votes HTTP/1.1
 Host: localhost:3333
 Content-Type: application/json
 
 {
   "pollOptionId": "pollOptionId"
 }
+
+### Get result to a poll
+GET ws://localhost:3333/polls/:pollId/results HTTP/1.1
+Host: localhost:3333
+Content-Type: application/json
